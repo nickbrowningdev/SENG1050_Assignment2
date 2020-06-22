@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE template [
+
+<!ELEMENT template (farm*)>
+  <!ELEMENT farm (goods_type, farm_name, farm_logo?, farm_picture, owner, details, phone, delivery, goods+)>
+     
+  <!ELEMENT goods_type (#PCDATA)>
+  <!ENTITY v "Vegetables">
+  <!ENTITY f "Fruit">
+  <!ENTITY n "Nuts">
+  <!ENTITY g "Grains">
+  <!ENTITY d "Dried Fruit">
+  <!ENTITY s "Seeds">
+  <!ELEMENT farm_name (#PCDATA)>
+  <!ELEMENT farm_logo (#PCDATA)>
+  <!ATTLIST farm_logo logo_height CDATA #FIXED "150">
+  <!ATTLIST farm_logo logo_width CDATA #FIXED "150">
+  <!ELEMENT farm_picture (#PCDATA)>
+  <!ATTLIST farm_picture farm_height CDATA #FIXED "288">
+  <!ATTLIST farm_picture farm_width CDATA #FIXED "473">
+  <!ELEMENT owner (#PCDATA)>
+  <!ELEMENT details
+	(description, url, address)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone
+	(home_phone, mobile_phone)>
+  <!ELEMENT home_phone (#PCDATA)>
+  <!ELEMENT mobile_phone (#PCDATA)>
+  <!ELEMENT delivery 
+	(min_price, deli_fee)>
+  <!ELEMENT min_price (#PCDATA)>
+  <!ELEMENT deli_fee (#PCDATA)>
+  <!ATTLIST delivery currency CDATA "$AUD">
+  <!ELEMENT goods 
+	(goods_name, goods_pic)>
+  <!ELEMENT goods_name (#PCDATA)>
+  <!ELEMENT goods_pic (#PCDATA)>
+	<!ATTLIST goods_pic goods_height CDATA #FIXED "488">
+	<!ATTLIST goods_pic goods_width CDATA #FIXED "473">
+  
+]>
+
+
+<template>
+	<farm>
+		<goods_type>&g;</goods_type>
+		<farm_name>Oxfordshire Farm</farm_name>
+		<farm_logo>img/logo4.jpg</farm_logo>
+		<farm_picture>img/farm4.png</farm_picture>
+		<owner>Christopher Chandler</owner>
+		<details>
+			<description>Located at 138 Gillards Road, Pokolbin, NSW. Oxfordshire Farm doesn't fail to let down their customers with seed products such as wheat and oats.</description>
+			<url>https://www.oxfordshirefarm.com.au/</url>
+			<address>138 Gillards Road, Pokolbin, NSW</address>
+		</details>
+		<phone>
+			<home_phone>1900 654 322</home_phone>
+			<mobile_phone>0491 570 158</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Wheat</goods_name>
+				<goods_pic>img/wheat.jpg</goods_pic>
+		</goods>
+		<goods>
+				<goods_name>Oat</goods_name>
+				<goods_pic>img/oats.jpg</goods_pic>
+		</goods>
+	</farm>
+	
+	<farm>
+		<goods_type>&d;</goods_type>
+		<farm_name>Bolwalla Farm</farm_name>
+		<farm_logo>img/logo5.jpg</farm_logo>
+		<farm_picture>img/farm5.png</farm_picture>
+		<owner>Phillip Burnell</owner>
+		<details>
+			<description>Bolwalla farm otherwise known as 'The most beautiful farm in NSW' grows raisins and prunes. The farm is located at 712 Wollombi Road, Broke, NSW.</description>
+			<url>https://www.bolwallafarm.com.au/</url>
+			<address>712 Wollombi Road, Broke, NSW</address>
+		</details>
+		<phone>
+			<home_phone>1900 654 325</home_phone>
+			<mobile_phone>0491 570 159</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Raisins</goods_name>
+				<goods_pic>img/raisin.jpg</goods_pic>
+		</goods>
+		<goods>
+				<goods_name>Prunes</goods_name>
+				<goods_pic>img/prunes.jpg</goods_pic>
+		</goods>
+	</farm>
+	
+	<farm>
+		<goods_type>&s;</goods_type>
+		<farm_name>Sandy Hollow Farm</farm_name>
+		<farm_logo>img/logo6.jpg</farm_logo>
+		<farm_picture>img/farm6.png</farm_picture>
+		<owner>Bruce White</owner>
+		<details>
+			<description>Sandy Hollow Farm located at 197 Mount Dangar Road grows seeds from products such as apple and oranges.</description>
+			<url>https://www.sandyhollowfarm.com.au/</url>
+			<address>197 Mount Dangar Road, Sandy Hollow, NSW</address>
+		</details>
+		<phone>
+			<home_phone>0491 570 160</home_phone>
+			<mobile_phone>1900 654 330</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Apple Seeds</goods_name>
+				<goods_pic>img/apple_seed.jpg</goods_pic>
+		</goods>
+		<goods>
+				<goods_name>Orange Seeds</goods_name>
+				<goods_pic>img/orange_seed.jpg</goods_pic>
+		</goods>
+	</farm>
+</template>	

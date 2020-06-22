@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="farm-xslt.xsl" type="text/xsl"?>
+
+<!DOCTYPE farms [
+<!ELEMENT farms (farm*)>
+  <!ELEMENT farm (goods_type, farm_name, farm_logo?, farm_picture, owner, details, phone, delivery, goods+)>
+  <!ELEMENT goods_type (#PCDATA)>
+  <!ENTITY v "Vegetables">
+  <!ENTITY f "Fruit">
+  <!ENTITY n "Nuts">
+  <!ENTITY g "Grains">
+  <!ENTITY d "Dried Fruit">
+  <!ENTITY s "Seeds">
+  <!ELEMENT farm_name (#PCDATA)>
+  <!ELEMENT farm_logo (#PCDATA)>
+  <!ATTLIST farm_logo logo_height CDATA #FIXED "150">
+  <!ATTLIST farm_logo logo_width CDATA #FIXED "150">
+  <!ELEMENT farm_picture (#PCDATA)>
+  <!ATTLIST farm_picture farm_height CDATA #FIXED "288">
+  <!ATTLIST farm_picture farm_width CDATA #FIXED "473">
+  <!ELEMENT owner (#PCDATA)>
+  <!ELEMENT details
+	(description, url, address)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT phone
+	(home_phone, mobile_phone)>
+  <!ELEMENT home_phone (#PCDATA)>
+  <!ELEMENT mobile_phone (#PCDATA)>
+  <!ELEMENT delivery 
+	(min_price, deli_fee)>
+  <!ELEMENT min_price (#PCDATA)>
+  <!ELEMENT deli_fee (#PCDATA)>
+  <!ATTLIST delivery currency CDATA "$AUD">
+  <!ELEMENT goods 
+	(goods_name, goods_pic)>
+  <!ELEMENT goods_name (#PCDATA)>
+  <!ELEMENT goods_pic (#PCDATA)>
+	<!ATTLIST goods_pic goods_height CDATA #FIXED "488">
+	<!ATTLIST goods_pic goods_width CDATA #FIXED "473">
+  
+]>
+
+<farms>
+	<farm>
+		<goods_type>&v;</goods_type>
+		<farm_name>Evergreen Farm</farm_name>
+		<farm_logo>img/logo1.jpg</farm_logo>
+		<farm_picture>img/farm2.png</farm_picture>
+		<owner>George Edward</owner>
+		<details>
+			<description>Evergreen Farm primarily stores and grows Vegetables. The farm is located at 123 Ironbark Lane, Nulkaba, NSW. The type of Vegetables grown are vegetables and potatoes.</description>
+			<url>https://www.evergreenfarm.com.au/</url>
+			<address>123 Ironbark Lane, Nulkaba, NSW</address>
+		</details>
+		<phone>
+			<home_phone>1900 654 323</home_phone>
+			<mobile_phone>0491 570 157</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Potatoes</goods_name>
+				<goods_pic>img/potatoes.jpg</goods_pic>
+				
+		</goods>
+		<goods>
+				<goods_name>Carrots</goods_name>
+				<goods_pic>img/carrots.jpg</goods_pic>
+		</goods>
+	</farm>
+	
+	<farm>
+		<goods_type>&f;</goods_type>
+		<farm_name>Armadillo Farm</farm_name>
+		<farm_logo>img/logo2.jpg</farm_logo>
+		<farm_picture>img/farm1.png</farm_picture>
+		<owner>John Gino</owner>
+		<details>
+			<description>Armadillo Farm is a farm located 20km east from the Central Coast. The farm primarily stores and grows Fruit. The farm is located at 300 Mangrove Creek, Mangrove, NSW. The type of Fruit grown are apples and oranges which can be either sold as the fruit product itself or as fruit juice.</description>
+			<url>https://www.armadillofarm.com.au/</url>
+			<address>300 Mangrove Creek, Mangrove, NSW</address>
+		</details>
+		<phone>
+			<home_phone>1900 654 321</home_phone>
+			<mobile_phone>0491 570 156</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Apples</goods_name>
+				<goods_pic>img/apple_fruit.jpg</goods_pic>
+		</goods>
+		<goods>
+				<goods_name>Oranges</goods_name>
+				<goods_pic>img/orange_fruit.jpg</goods_pic>
+		</goods>
+	</farm>
+	
+	<farm>
+		<goods_type>&n;</goods_type>
+		<farm_name>Dixon's Farm</farm_name>
+		<farm_logo>img/logo3.jpg</farm_logo>
+		<farm_picture>img/farm3.png</farm_picture>
+		<owner>Sarah Priest</owner>
+		<details>
+			<description>Dixon's Farm is located within the rural regions of Mudgee at 380 Horse Flat Lane. Dixon's Farm generally grows nuts including Pecans and Almonds.</description>
+			<url>https://www.dixonfarm.com.au/</url>
+			<address>380 Horse Flat Lane, Mudgee, NSW</address>
+		</details>
+		<phone>
+			<home_phone>1900 654 324</home_phone>
+			<mobile_phone>0491 570 160</mobile_phone>
+		</phone>
+		<delivery>
+				<min_price>5.00</min_price>
+				<deli_fee>3.00</deli_fee>
+		</delivery>
+		<goods>
+				<goods_name>Almonds</goods_name>
+				<goods_pic>img/almonds.jpg</goods_pic>
+		</goods>		
+		<goods>
+				<goods_name>Pecans</goods_name>
+				<goods_pic>img/pecan.jpg</goods_pic>
+		</goods>	
+	</farm>
+</farms>	

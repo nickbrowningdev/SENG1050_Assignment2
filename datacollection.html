@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+		<meta charset="utf-8">
+		<title>Data Collection</title>
+		
+		<style>
+			
+		</style>
+		
+		<script type="text/javascript">
+            function checkData() 
+            {
+				if(document.data_collection.yourname.value == "" || document.data_collection.youremail.value == "")
+				{
+					alert("required");
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+				
+				if(document.data_collection.yourage.value < 20)
+				{
+					alert("less than 20");
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+				
+            } // checkData()       
+        </script>
+   </head>
+
+   <body>
+		<div id="container">
+			<h1>Data Collection</h1>
+				<form name="data_collection" method="post" action="http://evc-cit.info/cgi-bin/echoform.cgi" onSubmit="return checkData();">
+					<div>
+						<label for="yourname">Please enter your name</label>
+						<input type="text" name="Name:" id="yourname">
+					</div>
+					
+					<div>
+						<label for="youremail">Please enter your email</label>
+						<input type="email" name="Email:" id="youremail">
+					</div>
+					
+					<div>
+						<label for="yourage">Please enter your age</label>
+						<input type="number" name="Age:" id="yourage">
+					</div>
+					
+					<input type="submit" value="Click Here to Submit"> 
+					<input type="reset"> 
+				</form>
+		</div>
+   </body>
+
+</html>
